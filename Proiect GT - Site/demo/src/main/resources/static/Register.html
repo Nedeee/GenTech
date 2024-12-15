@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Înregistrare - Lightning Wheels</title>
+    <link rel="stylesheet" href="styleRegister.css">
+</head>
+<body>
+    <div class="register-container">
+        <h1>Înregistrare</h1>
+        <form id="register-form">
+            <div class="form-group">
+                <label for="name">Nume:</label>
+                <input type="text" id="name" name="name" placeholder="Introdu numele" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Introdu emailul" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Parolă:</label>
+                <input type="password" id="password" name="password" placeholder="Introdu parola" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirmă Parola:</label>
+                <input type="password" id="confirm-password" name="confirmPassword" placeholder="Confirmă parola" required>
+            </div>
+            <button type="button" class="btn" id="submit-btn">Înregistrează-te</button>
+        </form>
+    </div>
+    <script src="scriptRegister.js"></script>
+</body>
+</html>

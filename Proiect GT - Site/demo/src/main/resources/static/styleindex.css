@@ -1,0 +1,139 @@
+/* Setare fundal pentru întreaga pagină */
+
+
+
+body {
+    background-image: url('poze/background_index.jpg'); /* Înlocuiește cu calea către imaginea ta */
+    background-size: cover; /* Fundalul să acopere întreaga pagină */
+    background-repeat: no-repeat; /* Evită repetarea imaginii */
+    background-position: center; /* Centrează imaginea */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 75px;
+}
+
+/* Opțional: Adăugare overlay pentru a face fundalul mai subtil */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Trimite overlay-ul în spate */
+}
+
+/* Secțiunea "Despre" */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh; /* Secțiunea ocupă aproape toată fereastra */
+    box-sizing: border-box;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row; /* Elemente pe orizontală */
+    align-items: center;
+    gap: 40px; /* Distanță între text și imagine */
+    max-width: 1200px; /* Lățime maximă a containerului */
+    text-align: left; /* Text aliniat la stânga */
+}
+
+.about-text {
+    flex: 1; /* Textul ocupă spațiul rămas */
+    max-width: 600px; /* Lățime maximă a textului */
+    padding: 20px 30px; /* Spațiu interior */
+    background: rgba(255, 255, 255, 0.4); /* Fundal semi-transparent */
+    backdrop-filter: blur(8px); /* Efect de blur */
+    border-radius: 15px; /* Colțuri rotunjite */
+    font-size: 18px;
+    color: #333; /* Culoare text */
+    line-height: 1.6; /* Îmbunătățirea lizibilității */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Umbra pentru text */
+}
+
+.about-image {
+    flex: 1; /* Imaginea ocupă spațiul rămas */
+    max-width: 400px; /* Dimensiune maximă imagine */
+    width: 100%; /* Imaginea se ajustează automat */
+    border-radius: 15px; /* Colțuri rotunjite pentru imagine */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Umbra pentru imagine */
+    transition: transform 0.3s ease; /* Animație pentru hover */
+}
+
+.about-image:hover {
+    transform: scale(1.05); /* Mărire ușoară la hover */
+}
+
+
+/* Secțiunea produselor */
+#products-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color:#00b4d8; 
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Spațiu între carduri */
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(45%); /* Două pe rând */
+    max-width: 500px;
+    cursor: pointer;
+}
+
+
+.product-card img {
+    width: 100%;
+    height: auto; /* Ajustăm înălțimea imaginii */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-card h3 {
+    margin: 15px 0;
+    font-size: 1.5em;
+    color: #555;
+}
+
+.product-card p {
+    color: #777;
+    font-size: 1em;
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-link {
+    display: block; /* Sau inline, în funcție de ce îți dorești */
+    text-decoration: none;
+    color: inherit; /* Folosește culoarea textului din stilurile părinte */
+    padding: 0; /* Elimină padding-ul */
+    margin: 0; /* Elimină marginile implicite */
+}
+.product-link.special {
+    text-decoration: underline;
+    color: blue;
+}
+
+
